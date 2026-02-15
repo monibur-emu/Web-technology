@@ -1,0 +1,42 @@
+<company>
+
+    <employe>
+        <id sr="a">1</id>
+        <name>John doe</name>
+        <address>
+            <flat></flat>   
+            <house>h#38</house>
+            <road>R#3</road>
+            <area>banani</area>
+            <dist>Dhaka</dist>
+        </address>  
+    </employe>
+        <employe>
+        <id sr="a">2</id>
+        <name>Mark Zuckerberg</name>
+        <address>
+            <flat>Flat# A/1</flat>   
+            <house>h#20</house>
+            <road>R#18</road>
+            <area>mirpur</area>
+            <dist>Dhaka</dist>
+        </address>  
+    </employe>
+        <employe>
+        <id sr="a">3</id>
+        <name>Ala voski</name>
+        <address>
+            <flat></flat>   
+            <house>h#38</house>
+            <road>R#3</road>
+            <area>motijheel</area>
+            <dist>Dhaka</dist>
+        </address>  
+    </employe>
+
+
+
+
+
+
+</company>
