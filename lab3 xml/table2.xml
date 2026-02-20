@@ -1,0 +1,36 @@
+<table2>
+    <person>
+        <sl_NO sr="a">23</sl_NO>
+        <name>John Carter</name>
+        <admission>
+            <date>25</date>
+            <month>12</month>
+            <year>2015</year>
+        </admission>  
+    </person>
+        <person>
+        <sl_NO sr="a">29</sl_NO>
+        <name>BOb Marshal</name>
+        <admission>
+            <date>13</date>
+            <month>01</month>
+            <year>1999</year>
+        </admission>  
+    </person>
+    </person>
+        <person>
+        <sl_NO sr="a">35</sl_NO>
+        <name>Clark kent</name>
+        <admission>
+            <date>17</date>
+            <month>06</month>
+            <year>2005</year>
+        </admission>  
+    </person>
+    
+
+
+
+
+
+</table2>
