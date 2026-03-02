@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Profile</title>
+    <script>
+        function validateProfile() {
+            let name = document.getElementById("nameInput").value.trim();
+            let email = document.getElementById("emailInput").value.trim();
+            let genderOptions = document.getElementsByName("gender");
+            let dateOfBirth = document.getElementById("dobInput").value;
+            let bloodGroup = document.getElementById("bloodGroupInput").value;
+            let degreeOptions = document.getElementsByName("degree");
+            let profilePicture = document.getElementById("profilePictureInput").value;
+
+            if (name === "") {
+                alert("Name cannot be empty");
+                return false;
+            }
+            let words = name.split(" ");
+            if (words.length < 2) {
+                alert("Name must contain at least two words");
+                return false;
+            }
+
+
+            let firstChar = name.charAt(0);
+            if (!((firstChar >= 'A' && firstChar <= 'Z') ||
+                (firstChar >= 'a' && firstChar <= 'z'))) {
+                alert("Name must start with a letter");
+                return false;
+            }
+
+
+            for (let i = 0; i < name.length; i++) {
+                let ch = name.charAt(i);
+
+                if (!(
+                    (ch >= 'A' && ch <= 'Z') ||
+                    (ch >= 'a' && ch <= 'z') ||
+                    ch === '.' ||
+                    ch === '-' ||
+                    ch === ' '
+                )) {
+                    alert("Only letters, dot(.) and dash(-) allowed");
+                    return false;
+                }
+            }
+
+            return true;
+        }
+        if (email === "") {
+            alert("Email cannot be empty");
+            return false;
+        }
+        let atIndex = email.indexOf("@");
+        if (atIndex === -1) {
+            alert("Email must contain @");
+            return false;
+        }
+
+        let dotIndex = email.lastIndexOf(".");
+        if (dotIndex === -1 || dotIndex < atIndex) {
+            alert("Email must contain a dot (.) after @");
+            return false;
+        }
+
+        return true;
+        for (let i = 0; i < options.length; i++) {
+            if (options[i].checked) {
+                return true;
+            }
+        }
+
+        alert("Please select at least one option");
+        return false;
+        let dd = document.getElementById("dd").value;
+        let mm = document.getElementById("mm").value;
+        let yyyy = document.getElementById("yyyy").value;
+
+        if (dd === "" || mm === "" || yyyy === "") {
+            alert("Fields cannot be empty");
+            return false;
+        }
+
+        if (dd < 1 || dd > 31 || mm < 1 || mm > 12 || yyyy < 1900 || yyyy > 2016) {
+            alert("Invalid date");
+            return false;
+        }
+        return true;
+        if (bloodGroup === "") {
+            alert("Select a Blood group");
+            return false;
+        }
+        return true;
+        for (let i = 0; i < options.length; i++) {
+            if (options[i].checked) {
+                return true;
+            }
+        }
+
+        alert("Please select at least one option");
+        return false;
+        if (pic === "") {
+            alert("Please select a profile picture");
+            return false;
+        }
+        return true;
+
+    </script>
+</head>
+
+<body>
+    <form onsubmit="return validateProfile()">
+
+        <fieldset>
+            <legend>Name</legend>
+            <input type="text" id="name">
+        </fieldset>
+
+        <br>
+
+
+        <fieldset>
+            <legend>Email</legend>
+            <input type="text" id="email">
+        </fieldset>
+
+        <br>
+
+
+        <fieldset>
+            <legend>Gender</legend>
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+            <input type="radio" name="gender"> Other
+        </fieldset>
+
+        <br>
+
+
+        <fieldset>
+            <legend>Date of Birth</legend>
+            DD <input type="number" id="dd" size="2">
+            MM <input type="number" id="mm" size="2">
+            YYYY <input type="number" id="yyyy" size="4">
+        </fieldset>
+
+        <br>
+
+
+        <fieldset>
+            <legend>Blood Group</legend>
+            <select id="blood">
+                <option value="">Select</option>
+                <option>A+</option>
+                <option>B+</option>
+                <option>O+</option>
+                <option>AB+</option>
+            </select>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Degree</legend>
+            <input type="checkbox" name="degree"> SSC
+            <input type="checkbox" name="degree"> HSC
+            <input type="checkbox" name="degree"> BSc
+        </fieldset>
+
+        <br>
+
+
+        <fieldset>
+            <legend>Photo</legend>
+            <input type="file" id="photo">
+        </fieldset>
+
+        <br>
+
+        <hr>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+</html>

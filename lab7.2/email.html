@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Email Validation</title>
+    <script>
+        function validateEmail() {
+            let email = document.getElementById("emailInput").value.trim();
+
+            if (email === "") {
+                alert("Email cannot be empty");
+                return false;
+            }
+
+            let atIndex = email.indexOf("@");
+            if (atIndex === -1) {
+                alert("Email must contain @");
+                return false;
+            }
+
+            let dotIndex = email.lastIndexOf(".");
+            if (dotIndex === -1 || dotIndex < atIndex) {
+                alert("Email must contain a dot (.) after @");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <form onsubmit="return validateEmail()">
+        <h2>Email</h2>
+        <input type="text" id="emailInput" placeholder="Enter your email">
+        <button type="submit">Submit</button>
+
+    </form>
+
+</html>

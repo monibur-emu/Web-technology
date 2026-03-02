@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Date of Birth Validation </title>
+
+    <script>
+        function validateDate() {
+            let dd = document.getElementById("dd").value;
+            let mm = document.getElementById("mm").value;
+            let yyyy = document.getElementById("yyyy").value;
+
+            if (dd === "" || mm === "" || yyyy === "") {
+                alert("Fields cannot be empty");
+                return false;
+            }
+
+            if (dd < 1 || dd > 31 || mm < 1 || mm > 12 || yyyy < 1900 || yyyy > 2016) {
+                alert("Invalid date");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <form onsubmit="return validateDate()">
+        <fieldset>
+            <legend>Date of Birth</legend>
+            DD:<input id="dd" type="number">/
+            MM:<input id="mm" type="number">/
+            YYYY:<input id="yyyy" type="number">
+
+            <hr style="width:100%; border:1px solid black;">
+
+            <br>
+
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Picture Validation</title>
+    <script>
+        function validateProfilePicture() {
+            let uid = document.getElementById("uidInput").value;
+            let pic = document.getElementById("picInput").value;
+            if (uid === "" || uid <= 0) {
+                alert("UID must be a positive number");
+                return false;
+            }
+            if (pic === "") {
+                alert("Please select a profile picture");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <form onsubmit="return validateProfilePicture()">
+        <fieldset>
+            <legend>Profile Picture</legend>
+
+            USer id: <input type="number" id="uidInput" placeholder="Enter your UID"><br><br>
+            Profile Picture:
+            <input type="file" id="picInput" accept="image/*"><br><br>
+            <hr style="width:70%; margin-left: 0px ; border:1px solid black;">
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+</html>
