@@ -1,6 +1,7 @@
 <?php
-
-$name = $_POST['name'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    echo "Name: " . $_POST['name'];
+}
 
 
 ?>
@@ -13,7 +14,7 @@ $name = $_POST['name'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>name</title>
 </head>
-<body> <form method="post" action="name_handeler.php">
+<body> <form method="post" action="index.php">
     <input type="text" name="name" >
     <input type="submit" name="submit" value="Submit">
 </form>
