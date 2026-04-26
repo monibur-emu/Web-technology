@@ -1,30 +1,13 @@
-<?php include("session.php"); ?>
+<?php include("../asset/session.php"); ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Login</title>
-</head>
-<body>
+<form method="post" action="../controller/loginCheck.php">
+    Username:
+    <input type="text" name="username"><br><br>
 
-<h2>Product Management Login</h2>
+    Password:
+    <input type="password" name="password"><br><br>
 
-<form method="post" action="loginCheck.php">
-    <fieldset>
-        <legend>LOGIN</legend>
-
-        User Name<br>
-        <input type="text" name="username"><br><br>
-
-        Password<br>
-        <input type="password" name="password"><br><br>
-
-        <input type="submit" name="submit" value="Login">
-    </fieldset>
+    <input type="submit" name="submit" value="Login">
 </form>
 
-<br>
-<a href="registration.php">Registration</a>
-
-</body>
-</html>
+<a href="registration.php">Signup</a>
