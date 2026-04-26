@@ -1,10 +1,9 @@
 <?php
-include("session.php");
+include("../asset/session.php");
 
 unset($_SESSION['status']);
 unset($_SESSION['username']);
-unset($_SESSION['current_user']);
 
-header("Location: login.php");
+header("Location: ../view/login.php");
 exit();
 ?>
